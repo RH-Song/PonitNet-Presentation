@@ -7,87 +7,95 @@
 \setlength{\subfigcapskip}{-.5em}
 \usepackage{beamerthemesplit}
 \usetheme{lankton-keynote}
+\usepackage{CJKutf8}
 
-\author[Bruce Wayne]{Bruce Wayne \quad Clark Kent\\Peter Parker \quad Alan Scot}
+\author[Group 10]{李声涛 \quad 17214643 \quad 宋日辉 \quad 17214675 \\ 黄莉 \quad 17210000 \quad 管卓群 \quad 17210000 \\ 周晓梅 \quad 17210000}
 
-\title[Short Title\hspace{2em}\insertframenumber/\inserttotalframenumber]{Full Title of the Presentation}
+\title[Short Title\hspace{2em}\insertframenumber/\inserttotalframenumber]{PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation}
 
-\date{February 14, 2008} %leave out for today's date to be insterted
+\date{December 19, 2017} %leave out for today's date to be insterted
 
-\institute{Justice League of America}
+\institute{School of Data and Computer Science, SYSU}
 
 \begin{document}
-
-\maketitle
+\begin{CJK*}{UTF8}{gbsn}
+  \maketitle
+\end{CJK*}
 
 % \section{Introduction}  % add these to see outline in slides
 
 \begin{frame}
-  \frametitle{Introduction}
-  Things in a Bulleted List\pause
+  \frametitle{Content}
   \begin{itemize}
-  \item Bullets that\pause
-  \item Come up\pause
-  \item One by one %leave out the \pause on the final item
+  	\item Introduction
+  	\item Problem State
+  	\item PointNet Architecture
+  	\item Theoretical Analysis
+  	\item Experiment
   \end{itemize}
 \end{frame}
 
-% \section{Main Body} % add these to see outline in slides
-
-\begin{frame}
-  \frametitle{Equations}
-  Equations are easy
-  \begin{itemize}
-  \item Just and paste equations\pause
-  \item From the paper!
-    \begin{equation*}
-      \textbf{p}^* = \underset{\textbf{p}}{\arg\!\min}~\sum_{\textbf{x}}\left[ I(\textbf{W}(\textbf{x};\textbf{p})) - T(\textbf{x}) \right]^2
-    \end{equation*}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Pictures}
-  \begin{figure}[t]
-    \centering
-    \subfigure[First Frame]{
-%    \includegraphics[width=3cm]{figures/naked_leaves/00000001}}
-    \includegraphics[width=3cm]{lion.png}}
-    \subfigure[Middle Frame]{
-%    \includegraphics[width=3cm]{figures/naked_leaves/00000120}}
-    \includegraphics[width=3cm]{lion.png}}
-    \subfigure[Last Frame]{
-%    \includegraphics[width=3cm]{figures/naked_leaves/00000240}}
-    \includegraphics[width=3cm]{lion.png}}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{A Movie}
-  \begin{center}
-    \movie[height=5cm,width=6.5cm,poster,autostart,loop]{}{leaves.avi}
-  \end{center}
-  \begin{itemize}
-  \item Movies only seem to work in Adobe Reader
-  \item Movie file is not embedded, it must be on the computer
-  \end{itemize}
-\end{frame}
-
-% \section{Conclusion} % add these to see outline in slides
-
-\begin{frame}
-  \frametitle{Credits}
-  \begin{itemize}
-  \item Brought to you by www.shawnlankton.com
-  \item Please let me know about improvements!
-  \item This was supposed to look like a KeyNote Show
-  \item inspiration: http://www.ucl.ac.uk/~ucbpeal/latexposter.html
-  \item inspiration: http://newsgroups.derkeiler.com/... (in code)
-        %http://newsgroups.derkeiler.com/Archive/Comp/comp.text.tex/2007-11/msg00299.html
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Questions}
-\end{frame}
 \end{document}
+
+
+
+%These are examples.
+% \section{Main Body} % add these to see outline in slides
+%
+%\begin{frame}
+%	\frametitle{Equations}
+%	Equations are easy
+%	\begin{itemize}
+%		\item Just and paste equations\pause
+%		\item From the paper!
+%		\begin{equation*}
+%		\textbf{p}^* = \underset{\textbf{p}}{\arg\!\min}~\sum_{\textbf{x}}\left[ I(\textbf{W}(\textbf{x};\textbf{p})) - T(\textbf{x}) \right]^2
+%		\end{equation*}
+%	\end{itemize}
+%\end{frame}
+
+
+%\begin{frame}
+%	\frametitle{Pictures}
+%	\begin{figure}[t]
+%		\centering
+%		\subfigure[First Frame]{
+%			%    \includegraphics[width=3cm]{figures/naked_leaves/00000001}}
+%			\includegraphics[width=3cm]{image/lion.png}}
+%		\subfigure[Middle Frame]{
+%			%    \includegraphics[width=3cm]{figures/naked_leaves/00000120}}
+%			\includegraphics[width=3cm]{image/lion.png}}
+%		\subfigure[Last Frame]{
+%			%    \includegraphics[width=3cm]{figures/naked_leaves/00000240}}
+%			\includegraphics[width=3cm]{image/lion.png}}
+%	\end{figure}
+%\end{frame}
+%
+%\begin{frame}
+%	\frametitle{A Movie}
+%	\begin{center}
+%		\movie[height=5cm,width=6.5cm,poster,autostart,loop]{}{leaves.avi}
+%	\end{center}
+%	\begin{itemize}
+%		\item Movies only seem to work in Adobe Reader
+%		\item Movie file is not embedded, it must be on the computer
+%	\end{itemize}
+%\end{frame}
+%
+%% \section{Conclusion} % add these to see outline in slides
+%
+%\begin{frame}
+%	\frametitle{Credits}
+%	\begin{itemize}
+%		\item Brought to you by www.shawnlankton.com
+%		\item Please let me know about improvements!
+%		\item This was supposed to look like a KeyNote Show
+%		\item inspiration: http://www.ucl.ac.uk/~ucbpeal/latexposter.html
+%		\item inspiration: http://newsgroups.derkeiler.com/... (in code)
+%		%http://newsgroups.derkeiler.com/Archive/Comp/comp.text.tex/2007-11/msg00299.html
+%	\end{itemize}
+%\end{frame}
+%
+%\begin{frame}
+%	\frametitle{Questions}
+%\end{frame}

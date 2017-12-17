@@ -101,7 +101,105 @@
 \end{frame}
 
 \begin{frame}{Experiments}
-	...
+	\begin{itemize}
+		\item Applications
+		\item Architecture Design Analysis
+		\item Visualizing PointNet
+		\item Time and Space Complexity Analysis
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Applications-3D Object Classification}
+	\begin{itemize}
+		\item 12,311 CAD models
+		\item from 40 man-made object categories, 
+		\item split into 9,843 for training and 2,468 for testing
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=8cm]{image/application.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Applications-3D Object Part Segmentation }
+	\begin{itemize}
+		\item ShapeNet part data set
+		\item 16,881 shapes from 16 categories, annotated with 50 parts in total
+		\item mIoU?
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=9cm]{image/seg.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Applications-Semantic Segmentation in Scenes }
+	\begin{itemize}
+		\item Stanford 3D semantic parsing data set
+		\item The dataset contains 3D scans from Matterport scanners in 6 areas including 271 rooms. Each point in the scan is annotated with one of the semantic labels from 13 categories (chair, table, floor, wall etc)
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=7cm]{image/sematic.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Applications-Semantic Segmentation in Scenes}
+	\begin{figure}
+		\includegraphics[width=8cm]{image/scencs1.png}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=8cm]{image/scencs2.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Architecture Design Analysis}
+	\begin{itemize}
+		\item Three approaches to achieve order invariance.
+		\item ModelNet40 shape classification problem
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=9cm]{image/arch.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Architecture Design Analysis}
+	\begin{itemize}
+		\item Effectiveness of Input and Feature Transformations
+		\item ModelNet40 shape classification problem
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=7cm]{image/arch2.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Architecture Design Analysis}
+	\begin{itemize}
+		\item Robustness Test
+		\item ModelNet40 shape classification problem
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=9cm]{image/arch3.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Visualizing PointNet}
+	\begin{itemize}
+		\item critical point sets $ C_S $ \& the upper-bound shapes $ N_S $
+	\end{itemize}
+	
+	\begin{figure}
+		\includegraphics[width=7cm]{image/visual.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Time and Space Complexity Analysis}
+	\begin{itemize}
+		\item PointNet’s space and time, complexity is O(N)
+		\item point cloud classification: 1K objects/second
+		\item semantic segmentation: 2 rooms/second
+		\item 1080X GPU on TensorFlow
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=9cm]{image/time.png}
+	\end{figure}
 \end{frame}
 
 \begin{frame}{Conclusion}

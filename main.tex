@@ -9,7 +9,7 @@
 \usetheme{lankton-keynote}
 \usepackage{CJKutf8}
 
-\author[Group 10]{李声涛 \quad 17214643 \quad 宋日辉 \quad 17214675 \\ 黄莉 \quad 17210000 \quad 管卓群 \quad 17214612 \\ 周晓梅 \quad 17214729}
+\author[Group 10]{李声涛 \quad 17214643 \quad 宋日辉 \quad 17214675 \\ 黄莉 \quad 17214619 \quad 管卓群 \quad 17214612 \\ 周晓梅 \quad 17214729}
 
 \title[PointNet\hspace{2em}\insertframenumber/\inserttotalframenumber]{PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation}
 
@@ -37,55 +37,104 @@
 
 \begin{frame}{Introduction}
 	\begin{itemize}
-		\item Point Set
+		\item \emph{Title:} 
+		\begin{itemize}
+			\item PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation
+		\end{itemize}
+		
+		\item \emph{Keywords:}
+		\begin{itemize}
+			\item Deep Learning
+			\item Point Sets (3D)
+			\item Classification and Segmentation
+			\item PointNet
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Deep Learning}
+	\begin{itemize}
+		\item Part of a broader family of machine learning methods \item Based on learning data representations
+		\item Deep learning architectures: DNN, DBN, RNN, CNN...
+	\end{itemize}
+	\begin{figure}[t]
+		\centering
+		\subfigure[Deep Learning Structure]{
+			\includegraphics[width=6cm]{image/dp.png}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Point Sets}
+	\begin{itemize}
+		\item A set of points.
+		\item 2D point: $ (x,y) $
+		\item 3D point: $ (x,y,z) $
 	\end{itemize}
 	\begin{figure}[t]
 		\centering
 		\subfigure[2D Point Set]{
-			\includegraphics[width=5cm]{image/timg.jpeg}}
+			\includegraphics[width=4.25cm]{image/timg.jpeg}}
 		\subfigure[3D Point Set (Point Cloud)]{
 			\includegraphics[width=5cm]{image/point_cloud.png}}
 	\end{figure}
 \end{frame}
 
-\begin{frame}{Traditional Point Cloud Processing}
-	%\begin{columns}
-	%	\column{0.5\textwidth}
+\begin{frame}{Classification and Segmentation}
+	\begin{columns}
+	\column{0.5\textwidth}
+	\begin{itemize}
+		\item Classification: distinguish different classes
+		\item Segmentation: figure out different parts
+	\end{itemize}
+	\column[]{0.7\textwidth}
+	\begin{figure}
+		\centering
+		\subfigure[Room]{\includegraphics[width=4cm]{image/cs.png} }
+		
+	\end{figure}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}{Neural Network Based Methods}
+	\begin{columns}
+		\column{0.5\textwidth}
 		\begin{itemize}
-			\item Edge-based methods
-			\item Model-based methods
-			\item Region-based methods
-			\item Attributes-based methods
-			\item Graph-based methods
+			\item Volumetric CNNs: 3D voxel grids
+			\begin{itemize}
+				\item Constrained by resolution
+			\end{itemize}
 		\end{itemize}
-	%	\column[]{0.7\textwidth}
-		\begin{figure}
-			\centering
-			\subfigure[A cup on the desk]{\includegraphics[width=6cm]{image/desk.png} }
-			\subfigure[A part of leg]{\includegraphics[width=4cm]{image/leg.png}}
-			 
-		\end{figure}
-%	\end{columns}
+		
+		\column{0.5\textwidth}
+	\begin{figure}
+		\centering
+		\subfigure[3D ShapeNet]{\includegraphics[width=3cm]{image/shapenet.png}}
+	\end{figure}
+	
+	\end{columns}
 	
 \end{frame}
 
 \begin{frame}{Neural Network Based Methods}
 	\begin{itemize}
-		\item Volumetric CNNs: 3D voxel grids
-		\begin{itemize}
-			\item Constrained by resolution
-		\end{itemize}
 		\item Multi-view CNNs: collections of images
 		\begin{itemize}
 			\item Nontrivial to extend them to scene understanding or other 3D tasks.
 		\end{itemize}
 	\end{itemize}
+	\begin{figure}
+		\centering
+		\subfigure[MVCNN]{\includegraphics[width=8cm]{image/mv.png}}
+	\end{figure}
+	
 \end{frame}
 
 \begin{frame}{PointNet}
 	\begin{itemize}
 		\item A novel deep net architecture
-		\item Input: point set
+		\item Input: points
+		\item Output: points and scores for each label
 		\item Tasks: 3D shape classification, shape part segmentation, and scene semantic parsing 
 		\item Simple, effective and robust
 	\end{itemize}
@@ -106,7 +155,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{object classification}
+\begin{frame}{Object Classification}
 	\begin{itemize}
 		\item The input: \\
 		Directly sampled from a shape \\
@@ -116,7 +165,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{semantic segmentation}
+\begin{frame}{Semantic Segmentation}
 	\begin{itemize}
 		\item The input: \\
 		A single object for part region segmentation \\
@@ -275,6 +324,36 @@
 		\includegraphics[width=8cm]{image/classify_log.png}
 	\end{figure}
 \end{frame}
+
+\begin{frame}{Heuristics}
+	\begin{itemize}
+		\item Use it on robots
+		\item Learn to create a novel structure
+		\item Figure out a research idea
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Traditional Point Cloud Processing}
+	%\begin{columns}
+	%	\column{0.5\textwidth}
+	\begin{itemize}
+		\item Edge-based methods
+		\item Model-based methods
+		\item Region-based methods
+		\item Attributes-based methods
+		\item Graph-based methods
+	\end{itemize}
+	%	\column[]{0.7\textwidth}
+	\begin{figure}
+		\centering
+		\subfigure[A cup on the desk]{\includegraphics[width=6cm]{image/desk.png} }
+		\subfigure[A part of leg]{\includegraphics[width=4cm]{image/leg.png}}
+		
+	\end{figure}
+	%	\end{columns}
+	
+\end{frame}
+
 \end{document}
 
 %These are examples.
